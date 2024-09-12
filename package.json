@@ -1,7 +1,7 @@
 {
   "name": "@gbrrrl-no/gabe-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/gabe-ui.cjs.js",
   "module": "dist/gabe-ui.es.js",
