@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "declaration": true, // Gera declarações de tipos
+    "declarationDir": "./dist/types", // Diretório onde os arquivos de tipo serão gerados
+    "emitDeclarationOnly": true, // Emite apenas as declarações de tipos
+    "outDir": "./dist", // Diretório de saída para o código JavaScript
+    "jsx": "react-jsx", // JSX compatível com React
+    "strict": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node"
+  },
+  "include": ["src"]
+}
