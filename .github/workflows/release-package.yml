@@ -1,8 +1,9 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,8 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+      - run: npm install
 
   publish-gpr:
     needs: build
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
+          scope: '@gbrrrl-no'
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
